@@ -18,8 +18,8 @@ Compile gleam to single binary, via Deno and Bun.
 
 </div>
 
-[![Package Version](https://img.shields.io/hexpm/v/garnet)](https://hex.pm/packages/garnet)
-[![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/garnet/)
+[![Package Version](https://img.shields.io/hexpm/v/garnet_tool)](https://hex.pm/packages/garnet_tool)
+[![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/garnet_tool/)
 
 <div align="center">
 
