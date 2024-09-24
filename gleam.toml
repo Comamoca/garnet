@@ -1,5 +1,5 @@
 name = "garnet_tool"
-version = "1.0.2"
+version = "1.0.3"
 target = "javascript"
 
 description = "Compile gleam to single binary, via Deno and Bun. "
