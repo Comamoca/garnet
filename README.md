@@ -28,7 +28,11 @@ Compile gleam to single binary, via Deno and Bun.
 ## 🚀 How to use
 
 ```sh
-gleam run -m garnet_tool example out bun
+# Compile via Deno(default)
+gleam run -m garnet_tool garnet_tool/example out
+
+# Compile via Bun
+gleam run -m garnet_tool garnet_tool/example out bun
 ```
 
 ## ⬇️  Install
@@ -70,7 +74,6 @@ MIT
 - [esgleam](https://hexdocs.pm/esgleam)   Apache-2.0
 - [gleam_community_colour](https://hexdocs.pm/gleam_community_colour)   Apache-2.0
 - [gleam_http](https://hexdocs.pm/gleam_http)   Apache-2.0
-- [jasper](https://hexdocs.pm/jasper)   AGPL-3.0-only
 - [gleam_stdlib](https://hexdocs.pm/gleam_stdlib)   Apache-2.0
 - [glexer](https://hexdocs.pm/glexer)   MIT
 - [thoas](https://hexdocs.pm/thoas)   Apache 2.0
