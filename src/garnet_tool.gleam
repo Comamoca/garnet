@@ -124,7 +124,7 @@ fn compile_deno(outfile: String, pwd: String) -> Result(String, String) {
 }
 
 fn compile_bun(outfile: String, pwd: String) -> Result(String, String) {
-  let target_path = filepath.join("/dist/", "glue.js")
+  let target_path = filepath.join("dist/", "glue.js")
 
   io.println(
     "===== Build on Bun ====="
