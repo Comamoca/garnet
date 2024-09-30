@@ -20,7 +20,6 @@ gleam_javascript = ">= 0.8.0 and < 1.0.0"
 gleam_fetch = ">= 1.0.0 and < 2.0.0"
 gleam_http = ">= 3.6.0 and < 4.0.0"
 gleam_json = ">= 1.0.1 and < 2.0.0"
-jasper = ">= 1.2.0 and < 2.0.0"
 argv = ">= 1.0.2 and < 2.0.0"
 filepath = ">= 1.0.0 and < 2.0.0"
 

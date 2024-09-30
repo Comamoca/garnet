@@ -22,8 +22,6 @@ packages = [
   { name = "gleeunit", version = "1.1.2", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleeunit", source = "hex", outer_checksum = "72CDC3D3F719478F26C4E2C5FED3E657AC81EC14A47D2D2DEBB8693CA3220C3B" },
   { name = "glexer", version = "1.0.1", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "glexer", source = "hex", outer_checksum = "BD477AD657C2B637FEF75F2405FAEFFA533F277A74EF1A5E17B55B1178C228FB" },
   { name = "glint", version = "0.18.1", build_tools = ["gleam"], requirements = ["gleam_community_ansi", "gleam_community_colour", "gleam_stdlib", "snag"], otp_app = "glint", source = "hex", outer_checksum = "5FB54D7732B4105E4AF4D89A7EE6D5E8CF33DA13A3575D0C6ECE470B97958454" },
-  { name = "jasper", version = "1.2.0", build_tools = ["gleam"], requirements = ["gleam_stdlib", "pears"], otp_app = "jasper", source = "hex", outer_checksum = "F86B8D44B72A1623940A947605AEC348A87BBC8D0570F3484EC74EF4FE2C0B53" },
-  { name = "pears", version = "0.3.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "pears", source = "hex", outer_checksum = "F823EDF5C7F8606A0B7764C071B6EE8515FC341D6FC69902E81120633DF7E983" },
   { name = "rad", version = "1.2.0", build_tools = ["gleam"], requirements = ["gleam_http", "gleam_httpc", "gleam_json", "gleam_stdlib", "glint", "shellout", "snag", "thoas", "tomerl"], otp_app = "rad", source = "hex", outer_checksum = "B639C6EFB41C913FE96AEF250C7E46CB79B7D6E3F5E95888503543C2B1C0CC56" },
   { name = "repeatedly", version = "2.1.1", build_tools = ["gleam"], requirements = [], otp_app = "repeatedly", source = "hex", outer_checksum = "38808C3EC382B0CD981336D5879C24ECB37FCB9C1D1BD128F7A80B0F74404D79" },
   { name = "shellout", version = "1.6.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "shellout", source = "hex", outer_checksum = "E2FCD18957F0E9F67E1F497FC9FF57393392F8A9BAEAEA4779541DE7A68DD7E0" },
@@ -38,7 +36,7 @@ packages = [
 argv = { version = ">= 1.0.2 and < 2.0.0" }
 cleam = { version = ">= 1.5.0 and < 2.0.0" }
 esgleam = { version = ">= 0.6.0 and < 1.0.0" }
-filepath = { version = ">= 1.0.0 and < 2.0.0"}
+filepath = { version = ">= 1.0.0 and < 2.0.0" }
 gleam_community_ansi = { version = ">= 1.4.0 and < 2.0.0" }
 gleam_fetch = { version = ">= 1.0.0 and < 2.0.0" }
 gleam_http = { version = ">= 3.6.0 and < 4.0.0" }
@@ -46,7 +44,6 @@ gleam_javascript = { version = ">= 0.8.0 and < 1.0.0" }
 gleam_json = { version = ">= 1.0.1 and < 2.0.0" }
 gleam_stdlib = { version = ">= 0.34.0 and < 2.0.0" }
 gleeunit = { version = ">= 1.0.0 and < 2.0.0" }
-jasper = { version = ">= 1.2.0 and < 2.0.0" }
 rad = { version = ">= 1.2.0 and < 2.0.0" }
 shellout = { version = ">= 1.6.0 and < 2.0.0" }
 simplifile = { version = ">= 1.7.0 and < 2.0.0" }

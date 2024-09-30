@@ -1,4 +1,7 @@
 // This is example program running on JavaScript runtime.
+import gleam/function
+import gleam/iterator
+import gleam/list
 import gleam/dynamic.{string}
 import gleam/fetch
 import gleam/http/request
@@ -7,12 +10,13 @@ import gleam/javascript/promise
 import gleam/result
 import gleam/string
 import gleam_community/ansi
-import jasper.{Index, Key, Root, String, parse_json, query_json}
+import gleam/json
 
 pub fn main() {
   let word = "gleam"
 
   use body <- promise.await(fetch(word))
+
   let _ =
     result.try(body, fn(body) {
       let mean = parse(body)
@@ -46,18 +50,12 @@ pub fn fetch(word: String) {
 }
 
 fn parse(body: String) {
-  let assert Ok(json) = parse_json(body)
-  let assert Ok(String(definition)) =
-    query_json(
-      json,
-      Root
-        |> Index(0)
-        |> Key("meanings")
-        |> Index(0)
-        |> Key("definitions")
-        |> Index(0)
-        |> Key("definition"),
-    )
-
-  definition
+  let assert Ok(dyn) = json.decode(body, dynamic.list(dynamic.dynamic))
+  let assert Ok(dyn) = list.first(dyn)
+  let assert Ok(dyn) = dynamic.field(named: "meanings", of: dynamic.list(dynamic.dynamic))(dyn)
+  let assert Ok(dyn) = list.first(dyn)
+  let assert Ok(dyn) = dynamic.field(named: "definitions", of: dynamic.list(dynamic.dynamic))(dyn)
+  let assert Ok(dyn) = list.first(dyn)
+  let assert Ok(dyn) = dynamic.field(named: "definition", of: string)(dyn)
+  dyn
 }
