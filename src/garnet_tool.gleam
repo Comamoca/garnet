@@ -96,7 +96,7 @@ pub fn compile(modname: String, outfile: String, runtime: String) {
       )
     Error(_) ->
       io.println(
-        "Compile faied."
+        "Compile failed."
         |> ansi.red,
       )
   }
