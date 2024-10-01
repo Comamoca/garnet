@@ -1,6 +1,6 @@
+import garnet_tool/internal
 import gleeunit
 import gleeunit/should
-import garnet_tool/internal
 
 pub fn main() {
   gleeunit.main()

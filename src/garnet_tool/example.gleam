@@ -1,16 +1,16 @@
 // This is example program running on JavaScript runtime.
-import gleam/function
-import gleam/iterator
-import gleam/list
 import gleam/dynamic.{string}
 import gleam/fetch
+import gleam/function
 import gleam/http/request
 import gleam/io
+import gleam/iterator
 import gleam/javascript/promise
+import gleam/json
+import gleam/list
 import gleam/result
 import gleam/string
 import gleam_community/ansi
-import gleam/json
 
 pub fn main() {
   let word = "gleam"
@@ -52,9 +52,11 @@ pub fn fetch(word: String) {
 fn parse(body: String) {
   let assert Ok(dyn) = json.decode(body, dynamic.list(dynamic.dynamic))
   let assert Ok(dyn) = list.first(dyn)
-  let assert Ok(dyn) = dynamic.field(named: "meanings", of: dynamic.list(dynamic.dynamic))(dyn)
+  let assert Ok(dyn) =
+    dynamic.field(named: "meanings", of: dynamic.list(dynamic.dynamic))(dyn)
   let assert Ok(dyn) = list.first(dyn)
-  let assert Ok(dyn) = dynamic.field(named: "definitions", of: dynamic.list(dynamic.dynamic))(dyn)
+  let assert Ok(dyn) =
+    dynamic.field(named: "definitions", of: dynamic.list(dynamic.dynamic))(dyn)
   let assert Ok(dyn) = list.first(dyn)
   let assert Ok(dyn) = dynamic.field(named: "definition", of: string)(dyn)
   dyn
