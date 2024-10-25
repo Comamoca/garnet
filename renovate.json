@@ -1,0 +1,14 @@
+{
+  "extends": ["config:base"],
+  "enabledManagers": ["gleam"],
+  "schedule": ["every sunday"],
+  "timezone": "Asia/Tokyo",
+  "automerge": true,
+  "automergeType": "branch",
+  "branchPrefix": "renovate/",
+  "commitMessageAction": "Update",
+  "labels": ["dependencies", "gleam"],
+  "major": {
+    "automerge": false
+  }
+}
