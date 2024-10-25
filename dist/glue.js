@@ -1,1 +1,0 @@
-import { main } from './example.js'; main();
