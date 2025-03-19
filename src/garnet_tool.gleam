@@ -36,7 +36,7 @@ pub fn main() {
 fn deploy_glue(modname: String) {
   // mkdir `./dist`
   let dir_name = "dist"
-  let dir = simplifile.verify_is_directory(dir_name)
+  let dir = simplifile.is_directory(dir_name)
 
   let code = internal.generate_glue(modname)
 
