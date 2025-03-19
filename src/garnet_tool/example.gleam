@@ -1,10 +1,8 @@
 // This is example program running on JavaScript runtime.
 import gleam/dynamic.{string}
 import gleam/fetch
-import gleam/function
 import gleam/http/request
 import gleam/io
-import gleam/iterator
 import gleam/javascript/promise
 import gleam/json
 import gleam/list
