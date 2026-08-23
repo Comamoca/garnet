@@ -1,14 +1,33 @@
 {
-  "extends": ["config:base"],
-  "enabledManagers": ["gleam"],
-  "schedule": ["every sunday"],
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
   "timezone": "Asia/Tokyo",
-  "automerge": true,
-  "automergeType": "branch",
-  "branchPrefix": "renovate/",
+  "labels": [
+    "dependencies"
+  ],
   "commitMessageAction": "Update",
-  "labels": ["dependencies", "gleam"],
-  "major": {
-    "automerge": false
-  }
+  "automerge": true,
+  "platformAutomerge": true,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": [
+      "before 5am on monday"
+    ]
+  },
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "minor"
+      ],
+      "minimumReleaseAge": "7 days"
+    },
+    {
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false
+    }
+  ]
 }
